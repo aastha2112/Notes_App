@@ -5,7 +5,10 @@ import NotesList from "./NotesList";
 const NotesDashboard = () => {
   return (
     <div>
-      <button onClick={() => localStorage.removeItem("login_token")}>
+      <button
+        style={{ color: "white", background: "red" }}
+        onClick={() => localStorage.removeItem("user")}
+      >
         Logout
       </button>
       <NoteForm />

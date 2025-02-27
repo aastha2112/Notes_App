@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
 import NotesDashboard from "./components/NotesDashboard";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
@@ -27,7 +28,15 @@ const App = () => {
 
   return (
     <div>
-      <h2>Collaborative notes</h2>
+      <h2
+        style={{
+          boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+          width: "100%",
+          padding: "2rem",
+        }}
+      >
+        Collaborative notes
+      </h2>
       {user ? (
         <NotesDashboard />
       ) : (
